@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Clothing Store</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<header>
+    <h1>🛒MiniStore</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+         <a href="detail.html">Detail</a>
+        <a href="contact.html">Contact</a>
+        
+    </nav>
+</header>
+<div class="main">
+<section class="hero">
+    <h2 style="color:#111111">New Fashion Collection</h2>
+    <br>
+    <p style="color: #444444">Simple • Stylish • Affordable</p>
+   <a href="shop.html"> <button>Shop Now</button></a>
+</section>
+</div>
+ <!-- Features Section -->
+    <section class="features">
+<div class="feature-box">
+    <img    style="width: 100px;height: 100px;"   src="Pics/free shipping.png" alt="Shipping">
+     <h3>Free Shipping</h3>
+    <p> free shiping across globe</p>
+    
+</div>
+
+
+        <div class="feature-box">
+            <img  src="Pics/customer-removebg-preview.png" alt="Customer support">
+      <h3 >Customer Support</h3>
+            <p>24/7 hours customers support </p>
+        </div>
+
+        <div class="feature-box">
+            <img src="Pics/secure_payement-removebg-preview.png" alt="Secure payment">
+          <h3>Secure Payment</h3>
+            <p>secure and safe payment</p>
+        </div>
+    </section>
+
+
+<footer>
+    <p>© 2026 <span style="color:#e60000;">MiniStore</span> | Designed by You</p>
+</footer>
+<script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = form.querySelector("input[type='text']").value.trim();
+    const email = form.querySelector("input[type='email']").value.trim();
+    const message = form.querySelector("textarea").value.trim();
+
+    if(name.length < 3){
+        alert("Name must be at least 3 characters.");
+        return;
+    }
+
+    if(!email.includes("@")){
+        alert("Please enter a valid email.");
+        return;
+    }
+
+    if(message.length < 10){
+        alert("Message must be at least 10 characters.");
+        return;
+    }
+
+    alert("Message Sent Successfully!");
+    form.reset();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* media */
+        @media (max-width: 768px) {
+    .detail-boxes {
+        flex-direction: column;
+    }
+
+    .detail-section {
+        padding: 80px 20px;
+    }
+}
+        body{
+            margin: 0;
+            padding: 0;
+        }
+      
+        .detail-section {
+    background-color: #111;
+    color: white;
+    padding: 350px 19%;
+    text-align: center;
+
+    
+}
+
+.detail-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color:maroon;
+}
+
+.detail-section p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.detail-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detail-box {
+    background-color: #1a1a1a;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.detail-box:hover {
+    background-color: #ff0000;
+    color: white;
+}
+ .backbutton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 36px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            z-index: 1000;
+
+        }
+
+        .backbutton:hover {
+            background-color: #cc0000;
+           
+        }
+    </style>
+</head>
+<body>
+    <section class="detail-section">
+    <div class="detail-container">
+        <h2>Product Details</h2>
+        <p>
+            At MiniStore, we provide high-quality fashion products designed 
+            with comfort, style, and affordability in mind. Our latest 
+            collection includes modern outfits perfect for everyday wear.
+        </p>
+
+        <div class="detail-boxes">
+            <div class="detail-box">
+                <h3>Premium Quality</h3>
+                <p>Soft fabric and long-lasting material for daily use.</p>
+            </div>
+
+            <div class="detail-box">
+                <h3>Modern Design</h3>
+                <p>Trendy and stylish outfits for every season.</p>
+            </div>
+
+            <div class="detail-box">
+                <h3>Affordable Prices</h3>
+                <p>Best fashion at budget-friendly prices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <a style="height: 40px; " href="index.html"> <button class="backbutton">&larr; Go back</button></a>
+
+</body>
+</html>

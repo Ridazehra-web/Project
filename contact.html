@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* media */
+        @media (max-width: 768px) {
+    .contact-section {
+        padding: 80px 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+    }
+}
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .contact-section {
+    background-color: #000;
+    color: white;
+    padding: 300px 10%;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ff0000;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-section button {
+    padding: 12px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #cc0000;
+}
+.backbutton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 36px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            z-index: 1000;
+
+        }
+
+        .backbutton:hover {
+    background-color: #cc0000;
+    
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+ <a style="height: 40px; " href="index.html"> <button class="backbutton">&larr; Go back</button></a>
+
+<script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = form.querySelector("input[type='text']").value.trim();
+    const email = form.querySelector("input[type='email']").value.trim();
+    const message = form.querySelector("textarea").value.trim();
+
+    if(name.length < 3){
+        alert("Name must be at least 3 characters.");
+        return;
+    }
+
+    if(!email.includes("@")){
+        alert("Please enter a valid email.");
+        return;
+    }
+
+    if(message.length < 10){
+        alert("Message must be at least 10 characters.");
+        return;
+    }
+
+    alert("Message Sent Successfully!");
+    form.reset();
+});
+</script>
+</body>
+</html>

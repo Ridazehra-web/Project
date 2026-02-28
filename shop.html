@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Products */
+        
+.products {
+    padding: 70px 8%;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 38px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card button {
+    padding: 10px 20px;
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #6f472c;
+    color: black;
+}
+
+
+        .backbutton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 36px;
+            background-color: #8b5e3c;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            z-index: 1000;
+
+        }
+
+        .backbutton:hover {
+            background-color: #6f472c;
+            /* darker brown */
+        }
+        .headingimage{
+            height: 60vh;
+            width: 100vw;
+        }
+        .category-menu { display: flex; justify-content: center; gap: 40px; margin: 40px 0; } .category-menu button { background: none; border: none; font-size: 18px; font-weight: 500; cursor: pointer; padding-bottom: 6px; position: relative; } /* underline */ .category-menu button::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background: #000; transition: width 0.3s ease; } /* hover effect */ .category-menu button:hover::after { width: 100%; } /* active state */ .category-menu button.active::after { width: 100%; } .category-menu button.active { font-weight: 600; }
+    
+    </style>
+</head>
+
+<body>
+    <div id="cart" style="position:fixed;top:20px;right:20px;
+background:#000;color:#fff;padding:10px 15px;border-radius:8px;">
+🛒 Cart: <span id="cart-count">0</span>
+</div>
+    <section style="background:rgb(248, 237, 223) ;" class="background">
+        <img class="headingimage" src="Pics/shop heading.png" alt="">
+        <div class="category-menu">
+    <button class="active">All</button>
+    <button>Men</button>
+    <button>Women</button>
+    <button>Kids</button>
+</div>
+        <section class="products">
+            <h2>OUR PRODUCTS</h2>
+                     <section class="products"> <div class="product-grid" id="productGrid"> <!-- Cards yahan JS se aayenge --> </div> </section> <script src="script.js"></script>
+     <script src="test.js"></script>
+            
+                <a style="height: 40px; " href="index.html"> <button class="backbutton">&larr; Go back</button></a>
+
+            </div>
+        </section>
+    </section>
+    
+<script src="shop.js"></script>
+</body>
+
+</html>
